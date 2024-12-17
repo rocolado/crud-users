@@ -1,0 +1,107 @@
+<div fxLayout="column" fxLayoutAlign="space-between start" class="margins">
+    <div fxLayoutAlign="start start">
+        <h2>Formulario</h2>
+    </div>
+    <div fxLayoutAlign="start start">
+        <form *ngIf="form" [formGroup]="form" (ngSubmit)="save()">
+            <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="2em">
+                <mat-form-field>
+                    <mat-label>NIF</mat-label>
+                    <input matInput formControlName="nif" required />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre" required />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Primer apellido</mat-label>
+                    <input matInput formControlName="primerApellido" required />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Segundo apellido</mat-label>
+                    <input matInput formControlName="segundoApellido" />
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="2em">
+                <mat-form-field>
+                    <mat-label>Género</mat-label>
+                    <mat-select formControlName="genero">
+                        <mat-option value="Masculino">Masculino</mat-option>
+                        <mat-option value="Femenino">Femenino</mat-option>
+                        <mat-option value="Otro">Otro</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Fecha de nacimiento</mat-label>
+                    <input matInput formControlName="fechaNacimiento" type="date" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Calle</mat-label>
+                    <input matInput formControlName="calle" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Número</mat-label>
+                    <input matInput formControlName="numero" />
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="2em">
+                <mat-form-field>
+                    <mat-label>Puerta</mat-label>
+                    <input matInput formControlName="puerta" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Código postal</mat-label>
+                    <input matInput formControlName="codigoPostal" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Ciudad</mat-label>
+                    <input matInput formControlName="ciudad" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Tipo</mat-label>
+                    <mat-select formControlName="tipo">
+                        <mat-option value="Demandante">Demandante</mat-option>
+                        <mat-option value="Empleado">Empleado</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div *ngIf="getTypeUser() === 'Empleado'" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="2em">
+                <mat-form-field>
+                    <mat-label>Empresa</mat-label>
+                    <input matInput formControlName="empresa" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Puesto</mat-label>
+                    <input matInput formControlName="puesto" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Fecha </mat-label>
+                    <input matInput formControlName="fechaExperiencia" type="date" />
+                </mat-form-field>
+            </div>
+
+            <div *ngIf="getTypeUser() === 'Demandante'" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="2em">
+                <mat-form-field>
+                    <mat-label>Institución</mat-label>
+                    <input matInput formControlName="institucion" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Titulación</mat-label>
+                    <input matInput formControlName="titulacion" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Fecha</mat-label>
+                    <input matInput formControlName="fechaEstudios" type="date" />
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="2em">
+                <button mat-raised-button color="primary" type="submit">Guardar</button>
+                <button mat-raised-button color="warn" type="button" (click)="cancel()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+  </div>

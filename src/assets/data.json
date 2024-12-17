@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nif": "12345678A",
+    "nombre": "Juan",
+    "primerApellido": "Pérez",
+    "segundoApellido": "Gómez",
+    "genero": "Masculino",
+    "fechaNacimiento": "1992-03-02",
+    "direccion": {
+      "calle": "Calle Mayor",
+      "numero": "10",
+      "puerta": "B",
+      "codigoPostal": "28001",
+      "ciudad": "Madrid"
+    },
+    "tipo": "Demandante",
+    "estudios": [
+      {
+        "institucion": "Universidad Complutense",
+        "titulacion": "Ingeniería Informática",
+        "fecha": "2007-02-12"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nif": "12345678B",
+    "nombre": "Sara",
+    "primerApellido": "Pérez",
+    "segundoApellido": "Gómez",
+    "genero": "Femenino",
+    "fechaNacimiento": "1990-01-01",
+    "direccion": {
+      "calle": "Calle Menor",
+      "numero": "12",
+      "puerta": "A",
+      "codigoPostal": "28001",
+      "ciudad": "Barcelona"
+    },
+    "tipo": "Demandante",
+    "estudios": [
+      {
+        "institucion": "Universtitat Barcelona",
+        "titulacion": "Ingeniería Informática",
+        "fecha": "2012-02-12"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nif": "87654321B",
+    "nombre": "Ana",
+    "primerApellido": "Martínez",
+    "segundoApellido": "López",
+    "genero": "Femenino",
+    "fechaNacimiento": "1982-11-12",
+    "direccion": {
+      "calle": "Avenida de América",
+      "numero": "20",
+      "puerta": "3B",
+      "codigoPostal": "28002",
+      "ciudad": "Madrid"
+    },
+    "tipo": "Empleado",
+    "experienciaLaboral": [
+      {
+        "empresa": "Empresa B",
+        "puesto": "Desarrollador web",
+        "fecha": "2018-02-12"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nif": "87654321B",
+    "nombre": "Vera",
+    "primerApellido": "Martínez",
+    "segundoApellido": "López",
+    "genero": "Femenino",
+    "fechaNacimiento": "1975-02-12",
+    "direccion": {
+      "calle": "Avenida Madrid",
+      "numero": "20",
+      "puerta": "3A",
+      "codigoPostal": "28002",
+      "ciudad": "Barcelona"
+    },
+    "tipo": "Empleado",
+    "experienciaLaboral": [
+      {
+        "empresa": "Empresa A",
+        "puesto": "Desarrollador web",
+        "fecha": "2020-02-12"
+      }
+    ]
+  }
+]
